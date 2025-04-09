@@ -1,0 +1,52 @@
+@import "tailwindcss";
+/* @import "../../../../assets/streeet-trail-bg.svg"; */
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+		scale: 0.5;
+	}
+	to {
+		opacity: 1;
+		scale: 1;
+	}
+}
+
+#content {
+	animation: appear linear;
+	animation-timeline: view();
+	animation-range: entry 0;
+}
+
+:root {
+  --title-color: #23312f;
+  --subtitle-color: #404756;
+  --bg-color1: #ffffff;
+  --bg-color2: #e6e9f5;
+  --text-color: #332212;
+  --bg-gradient1: #ff4e00;
+  --bg-gradient2: #ffc700;
+}
+
+.dark {
+  --title-color: #f1f8f7;
+  --subtitle-color: #b3b8c2;
+  --bg-color1: #1b1d24;
+  --bg-color2: #23272f;
+  --text-color: #ffffff;
+  --bg-gradient1: #3A0CA3;
+  --bg-gradient2: #4361EE;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
