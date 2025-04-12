@@ -28,10 +28,11 @@ html {
 }
 
 :root {
-  --title-color: #23312f;
-  --subtitle-color: #404756;
+  --title-color: #14191e;
+  --subtitle-color: #2a2f39;
   --bg-color1: #ffffff;
   --bg-color2: #e6e9f5;
+  --bg-trans: #f4f4f4;
   --text-color: #332212;
   --bg-gradient1: #ff4e00;
   --bg-gradient2: #ffc700;
@@ -39,9 +40,10 @@ html {
 
 .dark {
   --title-color: #f1f8f7;
-  --subtitle-color: #b3b8c2;
+  --subtitle-color: #d2d7e0;
   --bg-color1: #1b1d24;
   --bg-color2: #23272f;
+  --bg-trans: #2e2e2e;
   --text-color: #ffffff;
   --bg-gradient1: #3A0CA3;
   --bg-gradient2: #4361EE;

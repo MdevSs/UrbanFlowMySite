@@ -18,7 +18,7 @@ export function Functionality({ theme }: { theme: string | null }) {
            <div>
            <Image src="/assets/tela-celular-mockup.svg" width={400} height={400} alt="localDaImg" className='z-1'/>
            </div>
-           <p className="w-[40%] text-[20px] text-[var(--subtitle-color)] text-center">Nosso sistema oferece um painel de monitoramento em tempo real do trânsito, permitindo a análise contínua e o aprimoramento da nossa tecnologia. Além disso, disponibilizamos dashboards informativos ao público de forma periódica, promovendo transparência e mantendo todos atualizados sobre o impacto da nossa solução na mobilidade urbana.</p>
+           <p className="w-[40%] ml-10 text-[20px] text-[var(--subtitle-color)] text-left">Nosso sistema oferece um painel de monitoramento em tempo real do trânsito, permitindo a análise contínua e o aprimoramento da nossa tecnologia. Além disso, disponibilizamos dashboards informativos ao público de forma periódica, promovendo transparência e mantendo todos atualizados sobre o impacto da nossa solução na mobilidade urbana.</p>
         </div>
       </div>
     </div>

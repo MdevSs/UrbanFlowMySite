@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import TypingEffect from "./typingEffect";
 
 export function Header({ children }) {
   return (
@@ -7,7 +8,8 @@ export function Header({ children }) {
       <div className="flex justify-center">
         <div className="flex flex-col absolute z-1 mt-[28vh] text-[#ffffff]">
           <h1 className="text-[50px] font-bold text-center">UrbanFlow</h1>
-          <p className="text-[30px] font-medium">Mobilidade Inteligente para Cidades Mais Eficientes</p>
+          {/* <p className="text-[30px] font-medium">Mobilidade Inteligente para Cidades Mais Eficientes</p> */}
+          <TypingEffect />
         </div>
       </div>
       
