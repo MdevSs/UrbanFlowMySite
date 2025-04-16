@@ -1,0 +1,100 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.hero {
+    background: radial-gradient(circle at 50% 0%, #FF4E00 10%, #FFC700 50%, #FF4E00 100%);
+    background-size: 200% 200%;  
+    animation: animarDegrade 6s infinite alternate;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes animarDegrade {
+    0% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 50% 100%;
+    }
+}
+
+    .hero2 {
+        background: radial-gradient(circle at 30% 50%, #FF4E00, #FFC700, #FF4E00),
+                    linear-gradient(90deg, #FF4E00 0%, #FFC700 50%, #FF4E00 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    @keyframes animateBackground {
+        0% {
+            background-position: 30% 50%, 0% 0%;
+        }
+        50% {
+            background-position: 40% 60%, 100% 50%;
+        }
+        100% {
+            background-position: 30% 50%, 0% 100%;
+        }
+    }
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.hero-content h2 {
+    font-size: 40px;
+    font-weight: bold;
+    max-width: 600px;
+}

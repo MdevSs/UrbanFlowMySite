@@ -1,6 +1,7 @@
 "use client"
 
 import { Functionality } from "./ui/components/functionality/functionality";
+import { About } from "./ui/components/about/about";
 import { Problematic } from "./ui/components/problematic/problematic";
 import { Solution } from "./ui/components/solution/solution";
 import { Navbar } from "./ui/components/navbar/navbar";
@@ -29,6 +30,8 @@ export default function Home() {
 
       {/* Components */}
       <div className="rounded-[20px] overflow-hidden">
+        <div id="sobre" />
+        <About theme={theme} />
         <div id="problematica" />
         <Problematic theme={theme} />
         <div id="solucao" />
@@ -36,6 +39,7 @@ export default function Home() {
         <div id="funcionalidade" />
         <Functionality theme={theme} />
       </div>
+
     </div>
   );
 }

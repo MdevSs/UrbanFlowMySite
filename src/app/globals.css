@@ -32,10 +32,12 @@ html {
   --subtitle-color: #2a2f39;
   --bg-color1: #ffffff;
   --bg-color2: #e6e9f5;
-  --bg-trans: #f4f4f4;
+  --bg-trans1: #f4f4f4ef;
+  --bg-trans2: #f4f4f49f;
   --text-color: #332212;
   --bg-gradient1: #ff4e00;
   --bg-gradient2: #ffc700;
+  --border-active: #06060696;
 }
 
 .dark {
@@ -43,10 +45,12 @@ html {
   --subtitle-color: #d2d7e0;
   --bg-color1: #1b1d24;
   --bg-color2: #23272f;
-  --bg-trans: #2e2e2e;
+  --bg-trans1: #2e2e2eb7;
+  --bg-trans2: #2e2e2e73;
   --text-color: #ffffff;
   --bg-gradient1: #3A0CA3;
   --bg-gradient2: #4361EE;
+  --border-active: #fafafa4d;
 }
 
 body {
