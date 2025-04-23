@@ -40,9 +40,18 @@ export function Problematic({ theme }: { theme: string | null }) {
             Os sistemas de semáforos tradicionais não acompanham o fluxo real das cidades. O resultado? Longas filas, atrasos e uma mobilidade cada vez mais ineficiente.
            </p>
           </motion.div>
-          <div className="h-full z-1 flex p-20  mr-100 justify-center">
+          <motion.div className="h-full z-1 flex p-20  mr-100 justify-center" initial='hidden' whileInView="pop" variants={{
+            hidden: {
+              scale: .8,
+              opacity: 0
+            },
+            pop: {
+              scale: 1,
+              opacity: 1,
+            }
+          }}>
             <Image src="/assets/transito.svg" width={1000} height={600} alt="localDaImg" className='z-1 rounded-none'/>
-          </div>
+          </motion.div>
         </div>
       </div>
 

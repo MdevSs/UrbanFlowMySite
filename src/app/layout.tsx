@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
-import { Header } from "./ui/components/header/header";
+import Header from "./ui/components/header/header";
 import { Footer } from "./ui/components/footer/footer";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -24,9 +24,9 @@ export default function RootLayout( {children,} : Readonly <{children: React.Rea
     <html>
       <body className={`${poppins.variable}`}>
         <div>
-          <Header >
+          <Header>
             {children}
-          </Header >
+          </Header>
           <Footer />
         </div>
       </body>

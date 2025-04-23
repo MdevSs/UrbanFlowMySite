@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 
-const words = ['técnologia', 'prosperidade', 'o futuro',];
+const words = ['tecnologia', 'prosperidade', 'o futuro',];
 
 export default function TypingEffect() {
   const [wordIndex, setWordIndex] = useState(0);
@@ -38,7 +38,7 @@ export default function TypingEffect() {
   }, []);
 
   return (
-    <h1 className="text-3xl font-semibold">
+    <h1 className="text-[2vw] font-semibold">
       Urbanflow é {' '}
       <span className="text-white">
         {words[wordIndex].substring(0, subIndex)}
