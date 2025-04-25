@@ -25,11 +25,11 @@ export default function Home() {
   }, [theme]);
 
   return (
-    <div className=" mx-auto w-[95%] mt-[50%] relative min-h-screen bg-[var(--bg-color)] pt-{10px} transition 0.3 z-[1]">
+    <div className=" mx-auto w-[100%] relative min-h-screen bg-[var(--bg-color)] transition 0.3 z-[1]">
       <Navbar />
 
       {/* Components */}
-      <div className="rounded-[20px] overflow-hidden">
+      <div className="overflow-hidden">
         <div id="sobre" />
         <About theme={theme} />
         <div id="problematica" />

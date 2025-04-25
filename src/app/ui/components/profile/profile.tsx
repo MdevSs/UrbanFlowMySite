@@ -17,7 +17,7 @@ const Profile: React.FC<ProfileProps> = ({ image, name, selected, onClick }) => 
         setOnView(prev=> {
             
             if(selected)
-                return 1;
+                return 0.5;
 
             return 0;
         })
@@ -72,7 +72,7 @@ const Profile: React.FC<ProfileProps> = ({ image, name, selected, onClick }) => 
             pop: () => ({
                 z: 0,
                 opacity: (onView/0.6),
-                transform: `translate(${(onView/0.175)}vw, 0)`,
+                transform: `translate(${(onView*110)}px, 0)`,
                 transition: {
                     duration: 0.6,
                 }

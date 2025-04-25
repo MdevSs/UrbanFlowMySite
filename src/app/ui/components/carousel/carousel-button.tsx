@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import Profile from '../profile/profile';
+import ProfileCard from '@/app/ui/components/profile/profile-card';
 
 interface CarouselProps { 
     onClick?: () => void,
@@ -111,65 +112,72 @@ const Carousel: React.FC<CarouselProps> = ({onClick }) => {
       }, 5000);
     };
 
+  function fnSeleciona(index: number){
+    return (e: React.MouseEvent<HTMLDivElement>) => {
+      setSelectItem(index);
+    }
+  }
+
   return(
-        <motion.div className='flex items-center flex-col gap-2' initial="hidden" whileInView="pop" variants={{
-          hidden: {
-            transform: 'translate(-100px, 0)',
-            opacity: 0,
-            filter: 'blur(10px)'
-          },
-          pop: {
-            transform: 'translate(0, 0)',
-            opacity: 1,
-            filter: 'blur(0px)',
-            transition: {
-              delay: 0.3,
-              filter: { ease: 'easeIn' }
-            }
-          },
-
-        }}>
-            <h1 className="text-[var(--title-color)] mb-5 text-center font-bold text-[1.6vw]">Equipe</h1>
-      
-            {/* <Profile className='opacity-50' image="Cayki" name="Cayki"/>
-            <Profile className='grow-1' image="Clarice" name="Clarice" />
-            <Profile className='grow-1' image="Juan" name="Juan Ramon" />
-            <Profile className='grow-1' image="LeandroH" name="Leandro Henrique" />
-            <Profile className='grow-1' image="LeandroR" name="Leandro Ramos" />
-            <Profile className='grow-1' image="Luiza" name="Luiza" />
-            <Profile className='grow-1' image="Natan" name="Natan" />
-            <Profile className='grow-1' image="Nicole" name="Nicole" />
-            <Profile className='grow-1' image="Rian" name="Rian Santos" />
-            <Profile className='grow-1' image="Sophia" name="Sophia" /> */}
-
-              {
-                items.map((item, index)=>(
-                  <motion.div key={item.id ?? index} className='flex cursor-pointer' onClick={() => selecionarItem(index)} 
-                    initial={{
-                      flexGrow: 1,
-                      flexBasis: '50px',
-                    }}
-                    whileHover={{
-                        // margin: '25px 0px 25px 0px',
-                        // flexGrow: 2,
-                        flexBasis: selectedIndex === index ? '110px' : '60px',
-                      }}
-                    animate={{
-                        flexBasis: selectedIndex === index ? '120px' : '50px',
-                        // flexGrow: tooggleItem === index ? 2 : 1,
-                        scale: selectedIndex === index ? 1.7 : 1,
-                        transition: {
-                            duration: 0.4,
-                        }
-                    }}
-                  >
-                    <Profile selected={item.selected} image={item.image} name={item.name} />
-                  </motion.div>
-                ))
+        <div className='flex flex-row w-[100%] gap-15'>
+          <motion.div className='flex items-center flex-col gap-2 flex-1' initial="hidden" whileInView="pop" variants={{
+            hidden: {
+              transform: 'translate(-100px, 0)',
+              opacity: 0,
+              filter: 'blur(10px)'
+            },
+            pop: {
+              transform: 'translate(0, 0)',
+              opacity: 1,
+              filter: 'blur(0px)',
+              transition: {
+                delay: 0.3,
+                filter: { ease: 'easeIn' }
               }
-
-            {/* <button onClick={fnTroca}>Trocar</button> */}
-          </motion.div>
+            },
+          }}>
+              <h1 className="text-[var(--title-color)] mb-5 text-center font-bold text-[1.6vw]">Equipe</h1>
+              {/* <Profile className='opacity-50' image="Cayki" name="Cayki"/>
+              <Profile className='grow-1' image="Clarice" name="Clarice" />
+              <Profile className='grow-1' image="Juan" name="Juan Ramon" />
+              <Profile className='grow-1' image="LeandroH" name="Leandro Henrique" />
+              <Profile className='grow-1' image="LeandroR" name="Leandro Ramos" />
+              <Profile className='grow-1' image="Luiza" name="Luiza" />
+              <Profile className='grow-1' image="Natan" name="Natan" />
+              <Profile className='grow-1' image="Nicole" name="Nicole" />
+              <Profile className='grow-1' image="Rian" name="Rian Santos" />
+              <Profile className='grow-1' image="Sophia" name="Sophia" /> */}
+                {
+                  items.map((item, index)=>(
+                    <motion.div key={item.id ?? index} className='flex cursor-pointer' onClick={() => selecionarItem(index)}
+                      initial={{
+                        flexGrow: 1,
+                        flexBasis: '50px',
+                      }}
+                      whileHover={{
+                          // margin: '25px 0px 25px 0px',
+                          // flexGrow: 2,
+                          flexBasis: selectedIndex === index ? '110px' : '60px',
+                        }}
+                      animate={{
+                          flexBasis: selectedIndex === index ? '120px' : '50px',
+                          // flexGrow: tooggleItem === index ? 2 : 1,
+                          scale: selectedIndex === index ? 1.7 : 1,
+                          transition: {
+                              duration: 0.4,
+                          }
+                      }}
+                    >
+                      <Profile selected={item.selected} image={item.image} name={item.name} />
+                    </motion.div>
+                  ))
+                }
+              {/* <button onClick={fnTroca}>Trocar</button> */}
+            </motion.div>
+            <div className='flex items-center justify-center flex-9 p-20'>
+              <ProfileCard />
+            </div>
+        </div>
           
     )
 }

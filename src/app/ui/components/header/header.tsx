@@ -4,15 +4,11 @@ import "./header.css";
 import TypingEffect from "./typingEffect";
 import { motion } from "framer-motion";
 
-interface ProfilerProps {
-  children: ReactNode
-}
-
-const Header: React.FC<ProfilerProps> = ({ children }) => {
+const Header = () => {
   return (
-    <div className="">
+  <div className="w-[100%] h-[95vh]">
       <div className="flex justify-center">
-        <motion.div className="flex flex-col absolute z-1 mt-[34vh] text-[#ffffff]" initial="hidden" whileInView="show" variants={{
+        <motion.div className="flex flex-col h-[100%] absolute z-1 mt-[34vh] text-[#ffffff]" initial="hidden" whileInView="show" variants={{
           hidden: {
             opacity: 0,
             transform: 'translate(0, -100px)',
@@ -36,11 +32,10 @@ const Header: React.FC<ProfilerProps> = ({ children }) => {
         </motion.div>
       </div>
       
-      <div className="hero2">
+      <div className="hero2 h-[100%]">
         {Array.from({ length: 16 }).map((_, index) => (
           <div key={index} className="circle"></div>
         ))}
-        {children}
       </div>
     </div>
   );

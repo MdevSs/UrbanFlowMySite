@@ -23,10 +23,9 @@ export default function RootLayout( {children,} : Readonly <{children: React.Rea
   return (
     <html>
       <body className={`${poppins.variable}`}>
+          <Header />
         <div>
-          <Header>
-            {children}
-          </Header>
+          {children}
           <Footer />
         </div>
       </body>
