@@ -3,72 +3,88 @@ import { motion } from 'framer-motion';
 import Profile from '../profile/profile';
 import ProfileCard from '@/app/ui/components/profile/profile-card';
 
-interface CarouselProps { 
-    onClick?: () => void,
-}
 
-
-const Carousel: React.FC<CarouselProps> = ({onClick }) => {
+const Carousel = () => {
   const [items, setItems] = useState([
     {
       id: 0,
       name: 'Cayki',
       image: 'Cayki',
       selected: true,
+      insta: '@...',
+      cargos: ['💼 Gerente'] 
     },
     {
       id: 1,
       name: 'Clarice',
       image: 'Clarice',
       selected: false,
+      insta: '@...',
+      cargos: ['🎨 Designer','📝 Documentação',] 
     },
     {
       id: 2,
       name: 'Juan Ramon',
       image: 'Juan',
       selected: false,
+      insta: '@...',
+      cargos: ['💻 Dev', '🛠️ Backend', '🤖 IA',] 
     },
     {
       id: 3,
       name: 'Leandro Henrique',
       image: 'LeandroH',
       selected: false,
+      insta: '@...',
+      cargos: ['💻 Dev', '🌐 Web', '📱 Mobile'] 
     },
     {
       id: 4,
       name: 'Leandro Ramos',
       image: 'LeandroR',
       selected: false,
+      insta: '@...',
+      cargos: ['💻 Dev', '🛠️ Backend', '🤖 IA',] 
     },
     {
       id: 5,
       name: 'Luiza',
       image: 'Luiza',
       selected: false,
+      insta: '@...',
+      cargos: ['🎨 Designer','📝 Documentação',] 
     },
     {
       id: 6,
       name: 'Natan',
       image: 'Natan',
       selected: false,
+      insta: '@...',
+      cargos: ['💻 Dev', '🌐 Web', '📱 Mobile'] 
     },
     {
       id: 7,
       name: 'Nicole',
       image: 'Nicole',
       selected: false,
+      insta: '@...',
+      cargos: ['🎨 Designer','📝 Documentação',] 
     },
     {
       id: 8,
       name: 'Rian Santos',
       image: 'Rian',
       selected: false,
+      insta: '@...',
+      cargos: ['💻 Dev', '🌐 Web', '📱 Mobile'] 
     },
     {
       id: 9,
       name: 'Sophia',
       image: 'Sophia',
       selected: false,
+      insta: '@...',
+      cargos: ['🎨 Designer','📝 Documentação',] 
     },
   ])  
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -112,11 +128,11 @@ const Carousel: React.FC<CarouselProps> = ({onClick }) => {
       }, 5000);
     };
 
-  function fnSeleciona(index: number){
-    return (e: React.MouseEvent<HTMLDivElement>) => {
-      setSelectItem(index);
-    }
-  }
+  // function fnSeleciona(index: number){
+  //   return (e: React.MouseEvent<HTMLDivElement>) => {
+  //     setSelectItem(index);
+  //   }
+  //}
 
   return(
         <div className='flex flex-row w-[100%] gap-15'>
@@ -175,7 +191,7 @@ const Carousel: React.FC<CarouselProps> = ({onClick }) => {
               {/* <button onClick={fnTroca}>Trocar</button> */}
             </motion.div>
             <div className='flex items-center justify-center flex-9 p-20'>
-              <ProfileCard />
+              <ProfileCard item={items[selectedIndex]}/>
             </div>
         </div>
           

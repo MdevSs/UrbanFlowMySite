@@ -38,7 +38,7 @@ const Profile: React.FC<ProfileProps> = ({ image, name, selected, onClick }) => 
                         overflow: 'hidden',
                         opacity: 0.5,
                         // backgroundColor: ,
-                        borderColor: '#FFFFFF88',
+                        borderColor: 'var(--subtitle-color)',
                         borderWidth: 2.5,
                         scale: 1,
                         padding: 2,
@@ -60,7 +60,7 @@ const Profile: React.FC<ProfileProps> = ({ image, name, selected, onClick }) => 
                     },
                     focus: {
                         opacity: selected ? 1 : 0.5,
-                        borderColor: selected ? '#ff4e00' : "#FFFFFF88",
+                        borderColor: selected ? '#ff4e00' : "var(--subtitle-color)",
                         transition: {
                             duration: 0.5,
                         }
